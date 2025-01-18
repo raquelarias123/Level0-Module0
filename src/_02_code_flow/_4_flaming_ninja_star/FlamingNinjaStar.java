@@ -23,9 +23,19 @@ public class FlamingNinjaStar {
 		int count = 0;
 		
 	       //  LOOP. Start a while loop to repeat all of the code below ONE time (we will change this later)
-		while(count<1) {
+		while(count<25) {
 			rob.turn(360/8);
-			rob.move();
+			rob.move(64);
+			rob.turn(-40);
+			rob.setPenColor(Color.red);
+			rob.move(flameSize);
+			rob.turn(170);
+			rob.move(flameSize);
+			rob.setPenColor(Color.black);
+			rob.turn(64);
+			rob.move(baseSize);
+			count++;
+
 		}
 
 			   // TURN RIGHT     Turn the robot 1/8 of a circle (hint: 360 degrees will turn a full circle)

@@ -2,13 +2,30 @@ package _03_print_and_popups._5_awesome_or_not;
 
 import java.util.Random;
 
+import javax.swing.JOptionPane;
+
 public class AwesomeOrNot {
 
 	// 1. Make a main method that includes everything below
-
+public static void main (String[]args) {
 	
 		Random ran = new Random();    //This will be used below to make a random number. 
-		
+		int num = ran.nextInt(4);
+		System.out.println(num);
+		JOptionPane.showInputDialog(null, "Enter something you think is awesome: ");
+
+		if (num == 0) {
+			JOptionPane.showMessageDialog(null, "What you entered is awesome!");
+		}
+		else if (num ==1) {
+			JOptionPane.showMessageDialog(null, "What you entered is ok");
+		}
+		else if (num==2){
+			JOptionPane.showMessageDialog(null, "What you entered is boring.");
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "What you entered is cool");
+		}
 		// 2. Make a variable that will hold a random whole number
 	
 		// 3. Set your variable equal to a positive number less than 4 using     ran.nextInt(4); 
@@ -32,5 +49,5 @@ public class AwesomeOrNot {
 		// 8. If your variable is  3
 	
 			// -- invent your own message to give to the user (be nice).
-
+	}
 }
